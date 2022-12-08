@@ -20,7 +20,9 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    ReactiveFormsModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

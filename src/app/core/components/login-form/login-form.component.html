@@ -1,12 +1,12 @@
 <h2>Sign in</h2>
 
-<form>
+<form [formGroup]="loginForm">
   <label for="email">
     E-mail Address
   </label>
   <input
+    formControlName="email"
     id="email"
-    name="email"
     type="text"
     required
   >
@@ -15,8 +15,8 @@
     Password
   </label>
   <input
+    formControlName="password"
     id="password"
-    name="password"
     type="password"
     required
   >
@@ -25,7 +25,7 @@
     Forgot password?
   </a>
 
-  <button type="submit">
+  <button type="submit" (click)="submit()">
     Sign in
   </button>
 
