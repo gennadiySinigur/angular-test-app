@@ -1,25 +1,49 @@
 <h2>Sign in</h2>
 
 <form [formGroup]="loginForm">
-  <label for="email">
-    E-mail Address
-  </label>
-  <input
-    formControlName="email"
-    id="email"
-    type="text"
-    required
+  <div>
+    <label
+      for="email"
+      [class.label-invalid]="shouldDisplayValidationError(email)"
+    >
+      E-mail Address
+    </label>
+    <input
+      formControlName="email"
+      id="email"
+      type="text"
+      required
+    >
+  </div>
+  <div
+    *ngIf="shouldDisplayValidationError(email)"
+    class="validation-errors"
   >
+    <small *ngIf="isRequiredError(email)">Required</small>
+    <small *ngIf="isRegexPatternError(email)">Invalid email address</small>
+  </div>
 
-  <label for="password">
-    Password
-  </label>
-  <input
-    formControlName="password"
-    id="password"
-    type="password"
-    required
+  <div>
+    <label
+      for="password"
+      [class.label-invalid]="shouldDisplayValidationError(password)"
+    >
+      Password
+    </label>
+    <input
+      formControlName="password"
+      id="password"
+      type="password"
+      required
+    >
+  </div>
+  <div
+    *ngIf="shouldDisplayValidationError(password)"
+    class="validation-errors"
   >
+    <small *ngIf="isRequiredError(password)">Required</small>
+    <small *ngIf="isMinLengthError(password)">Must be 8 characters or more</small>
+  </div>
 
   <a href="#">
     Forgot password?

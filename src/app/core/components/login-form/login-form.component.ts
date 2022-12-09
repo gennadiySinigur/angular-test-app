@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login-form',
@@ -17,11 +17,11 @@ export class LoginFormComponent implements OnInit {
 
   initializeForm(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [
+      email: new FormControl<string|null>('', [
         Validators.required,
         Validators.pattern(/^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/),
       ]),
-      password: new FormControl(null, [
+      password: new FormControl<string|null>(null, [
         Validators.required,
         Validators.minLength(8),
       ]),
@@ -29,4 +29,30 @@ export class LoginFormComponent implements OnInit {
   }
 
   submit(): void {}
+
+  shouldDisplayValidationError(
+    control: AbstractControl<string, string> | null
+  ): boolean | undefined {
+    return control?.invalid && (control?.dirty || control?.touched);
+  }
+
+  isRequiredError(control: AbstractControl<string, string> | null): boolean {
+    return control?.errors?.['required'];
+  }
+
+  isRegexPatternError(control: AbstractControl<string, string> | null): boolean {
+    return control?.errors?.['pattern'];
+  }
+
+  isMinLengthError(control: AbstractControl<string, string> | null): boolean {
+    return control?.errors?.['minlength'];
+  }
+
+  get email() {
+    return this.loginForm.get('email');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
+  }
 }
