@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
+import { authReducer } from './state/auth/auth.reducer';
 import { LoginComponent } from './login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 
@@ -12,7 +14,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature('auth', authReducer)
   ],
   exports: [
     LoginComponent,

@@ -20,7 +20,7 @@ import { SharedModule } from './shared/shared.module';
     AdminModule,
     CoreModule,
     SharedModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({})
   ],
   providers: [
     ReactiveFormsModule
