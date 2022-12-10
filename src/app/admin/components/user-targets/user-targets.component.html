@@ -5,11 +5,11 @@
     <div class="targets-info views-info">
       <div class="targets-info-text">
         <h3 class="targets-info-title views-title">Views</h3>
-        <p class="views-percent">23%</p>
+        <p class="views-percent">{{ viewsPercent }}%</p>
       </div>
       <div class="targets-info-progress-bar views-progress-bar">
         <span class="progress-root">
-          <span class="progress-bar"></span>
+          <span [style.transform]="getTranslateXValue(viewsPercent)" class="progress-bar"></span>
         </span>
       </div>
     </div>
@@ -17,11 +17,11 @@
     <div class="targets-info followers-info">
       <div class="targets-info-text">
         <h3 class="targets-info-title followers-title">Followers</h3>
-        <p class="followers-percent">23%</p>
+        <p class="followers-percent">{{ followersPercent }}%</p>
       </div>
       <div class="targets-info-progress-bar followers-progress-bar">
         <span class="progress-root">
-          <span class="progress-bar"></span>
+          <span [style.transform]="getTranslateXValue(followersPercent)" class="progress-bar"></span>
         </span>
       </div>
     </div>
@@ -29,11 +29,11 @@
     <div class="targets-info income-info">
       <div class="targets-info-text">
         <h3 class="targets-info-title income-title">Income</h3>
-        <p class="income-percent">23%</p>
+        <p class="income-percent">{{ incomePercent }}%</p>
       </div>
       <div class="targets-info-progress-bar income-progress-bar">
         <span class="progress-root">
-          <span class="progress-bar"></span>
+          <span [style.transform]="getTranslateXValue(incomePercent)" class="progress-bar"></span>
         </span>
       </div>
     </div>
