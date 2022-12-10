@@ -1,0 +1,181 @@
+.targets-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin-bottom: 32px;
+  padding: 24px;
+}
+
+.targets-title {
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.334;
+  margin-bottom: 24px;
+}
+
+.targets-info {
+  padding: 12px 0;
+}
+
+.targets-info-text,
+.targets-info-title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.targets-info-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.targets-info-progress-bar {
+  & .progress-root {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 12px;
+    border-radius: 16px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: currentcolor;
+      opacity: 0.3;
+    }
+  }
+
+  & .progress-bar {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transform-origin: left center;
+    background-color: currentcolor;
+    transform: translateX(-77%);
+  }
+}
+
+.views-progress-bar {
+  & .progress-root {
+    color: rgb(41, 98, 255);
+  }
+}
+
+.followers-progress-bar {
+  & .progress-root {
+    color: rgb(255, 196, 0);
+  }
+}
+
+.income-progress-bar {
+  & .progress-root {
+    color: rgb(255, 61, 0);
+  }
+}
+
+.meetings-title {
+  margin-bottom: 24px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.235;
+}
+
+.meeting-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 24px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+
+  .chevron-right-icon {
+    cursor: pointer;
+    display: flex;
+    padding: 12px;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      fill: rgba(0, 0, 0, 0.54);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.meeting-info {
+  flex-grow: 1;
+}
+
+.meeting-person-name {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.meeting-time {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: rgb(96, 125, 139);
+}
+
+.meeting-person-avatar {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(236, 239, 241);
+  margin-right: 16px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    object-fit: cover;
+    color: transparent;
+    text-indent: 10000px;
+  }
+}
+
+.add-meeting-button {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  padding: 16px 24px;
+  width: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(178, 178, 178);
+  }
+
+  span {
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    font-size: 1.5rem;
+  }
+}
