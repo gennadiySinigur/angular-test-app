@@ -3,6 +3,48 @@
 <form [formGroup]="loginForm">
   <div>
     <label
+      for="firstName"
+      [class.label-invalid]="shouldDisplayValidationError(firstName)"
+    >
+      First Name
+    </label>
+    <input
+      formControlName="firstName"
+      id="firstName"
+      type="text"
+      required
+    >
+  </div>
+  <div
+    *ngIf="shouldDisplayValidationError(firstName)"
+    class="validation-errors"
+  >
+    <small *ngIf="isRequiredError(firstName)">Required</small>
+  </div>
+
+  <div>
+    <label
+      for="lastName"
+      [class.label-invalid]="shouldDisplayValidationError(lastName)"
+    >
+      Last Name
+    </label>
+    <input
+      formControlName="lastName"
+      id="lastName"
+      type="text"
+      required
+    >
+  </div>
+  <div
+    *ngIf="shouldDisplayValidationError(lastName)"
+    class="validation-errors"
+  >
+    <small *ngIf="isRequiredError(lastName)">Required</small>
+  </div>
+
+  <div>
+    <label
       for="email"
       [class.label-invalid]="shouldDisplayValidationError(email)"
     >

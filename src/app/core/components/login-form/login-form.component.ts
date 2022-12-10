@@ -23,10 +23,19 @@ export class LoginFormComponent implements OnInit {
 
   initializeForm(): void {
     this.loginForm = new FormGroup({
+      firstName: new FormControl<string|null>('', [
+        Validators.required,
+      ]),
+
+      lastName: new FormControl<string|null>('', [
+        Validators.required,
+      ]),
+
       email: new FormControl<string|null>('', [
         Validators.required,
         Validators.pattern(/^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/),
       ]),
+
       password: new FormControl<string|null>(null, [
         Validators.required,
         Validators.minLength(8),
@@ -36,9 +45,14 @@ export class LoginFormComponent implements OnInit {
 
   submit(): void {
     if (this.loginForm.valid) {
-      const { email, password } = this.loginForm.value;
+      const { firstName, lastName, email, password } = this.loginForm.value;
 
-      this.authenticationService.login(email, password);
+      this.authenticationService.login(
+        firstName,
+        lastName,
+        email,
+        password
+      );
       this.router.navigateByUrl('/admin');
     }
   }
@@ -59,6 +73,14 @@ export class LoginFormComponent implements OnInit {
 
   isMinLengthError(control: AbstractControl<string, string> | null): boolean {
     return control?.errors?.['minlength'];
+  }
+
+  get firstName() {
+    return this.loginForm.get('firstName');
+  }
+
+  get lastName() {
+    return this.loginForm.get('lastName');
   }
 
   get email() {
