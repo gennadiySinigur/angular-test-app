@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-login-form',
@@ -9,7 +11,7 @@ import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/form
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -28,7 +30,13 @@ export class LoginFormComponent implements OnInit {
     });
   }
 
-  submit(): void {}
+  submit(): void {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+
+      this.authenticationService.login(email, password);
+    }
+  }
 
   shouldDisplayValidationError(
     control: AbstractControl<string, string> | null
