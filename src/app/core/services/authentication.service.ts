@@ -16,11 +16,20 @@ export class AuthenticationService {
 
   constructor(private store: Store<AppState>) { }
 
-  login(email: string, password: string): void {
-    this.store.dispatch(login({ user: { email, password } }));
+  login(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ): void {
+    this.store.dispatch(login({
+      user: { firstName, lastName, email, password }
+    }));
   }
 
   logout(): void {
-    this.store.dispatch(logout({ user: { email: '', password: '' } }));
+    this.store.dispatch(logout({
+      user: { firstName: '', lastName: '', email: '', password: '' }
+    }));
   }
 }

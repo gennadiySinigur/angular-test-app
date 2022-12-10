@@ -11,6 +11,8 @@ export interface AuthState {
 export const initialState: AuthState = {
   isAuthenticated: false,
   user: {
+    firstName: '',
+    lastName: '',
     email: '',
     password: ''
   }
@@ -24,6 +26,8 @@ export const authReducer = createReducer(
     isAuthenticated: true,
     user: {
       ...user,
+      firstName: user.firstName,
+      lastName: user.lastName,
       email: user.email,
       password: user.password
     }
@@ -34,6 +38,8 @@ export const authReducer = createReducer(
     isAuthenticated: false,
     user: {
       ...user,
+      firstName: '',
+      lastName: '',
       email: '',
       password: ''
     }
