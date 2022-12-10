@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 
 import { AppState } from '../state/app.state';
 import { authSelector, userSelector } from '../state/auth/auth.selectors';
-import { login } from '../state/auth/auth.actions';
+import {login, logout} from '../state/auth/auth.actions';
 import { User } from '../models/User';
 
 @Injectable({
@@ -16,7 +16,11 @@ export class AuthenticationService {
 
   constructor(private store: Store<AppState>) { }
 
-  login(email: string, password: string) {
+  login(email: string, password: string): void {
     this.store.dispatch(login({ user: { email, password } }));
+  }
+
+  logout(): void {
+    this.store.dispatch(logout({ user: { email: '', password: '' } }));
   }
 }
