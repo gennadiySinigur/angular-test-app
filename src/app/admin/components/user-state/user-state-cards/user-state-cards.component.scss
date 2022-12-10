@@ -20,16 +20,6 @@
   border-radius: 50%;
   margin-right: 16px;
 
-  & svg {
-    width: 1em;
-    height: 1em;
-    font-size: 1.5rem;
-
-    & path {
-      fill: rgb(255, 255, 255);
-    }
-  }
-
   & + div {
     flex-grow: 1;
   }
