@@ -7,3 +7,8 @@ export const login = createAction(
   ActionTypes.LOGIN,
   props<{ user: User }>(),
 );
+
+export const logout = createAction(
+  ActionTypes.LOGOUT,
+  props<{ user: User }>(),
+)

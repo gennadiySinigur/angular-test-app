@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { User } from '../../models/User';
-import { login } from './auth.actions';
+import { login, logout } from './auth.actions';
 
 export interface AuthState {
   isAuthenticated: boolean;
@@ -18,7 +18,8 @@ export const initialState: AuthState = {
 
 export const authReducer = createReducer(
   initialState,
-  on(login, (state: AuthState, { user }) => ({
+
+  on(login, (state: AuthState, { user }): AuthState => ({
     ...state,
     isAuthenticated: true,
     user: {
@@ -26,5 +27,15 @@ export const authReducer = createReducer(
       email: user.email,
       password: user.password
     }
-  }))
+  })),
+
+  on(logout, (state: AuthState, { user }): AuthState => ({
+    ...state,
+    isAuthenticated: false,
+    user: {
+      ...user,
+      email: '',
+      password: ''
+    }
+  })),
 );
