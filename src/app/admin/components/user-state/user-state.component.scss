@@ -1,0 +1,144 @@
+.user-state-card {
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-state-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 16px;
+
+  & svg {
+    width: 1em;
+    height: 1em;
+    font-size: 1.5rem;
+
+    & path {
+      fill: rgb(255, 255, 255);
+    }
+  }
+
+  & + div {
+    flex-grow: 1;
+  }
+}
+
+.like-icon {
+  background-color: rgb(41, 98, 255);
+}
+
+.heart-icon {
+  background-color: rgb(255, 61, 0);
+}
+
+.smile-icon {
+  background-color: rgb(255, 196, 0);
+}
+
+.likes-title,
+.loves-title,
+.smiles-title {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.43;
+  color: rgb(96, 125, 139);
+}
+
+.arrow-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.arrow-up-icon {
+  & svg {
+    fill: rgb(0, 230, 118);
+  }
+}
+
+.arrow-right-icon {
+  & svg {
+    fill: rgba(0, 0, 0, 0.26);
+  }
+}
+
+.arrow-down-icon {
+  & svg {
+    fill: rgb(255, 61, 0);
+  }
+}
+
+.views-card {
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+}
+
+.views-title {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.views-count {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.views-chart {
+  margin-bottom: 40px;
+}
+
+.views-footer {
+  border-radius: 16px;
+  background-color: rgb(236, 239, 241);
+  display: flex;
+  align-items: center;
+  padding: 24px;
+
+  & svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.dashboard-icon {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  color: inherit;
+  background-color: rgb(255, 255, 255);
+  margin-right: 16px;
+}
+
+.dashboard-link {
+  flex-grow: 1;
+  color: rgb(69, 90, 100);
+  font-weight: 700;
+  line-height: 1.6;
+}

@@ -1,103 +1,249 @@
 <div class="user-state">
-  <div class="likes-card">
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-utw1md-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="ThumbUpIcon"
-    >
-      <path
-        d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"
-      ></path>
-    </svg>
+  <div class="user-state-card likes-card">
+    <div class="user-state-icon like-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-utw1md-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="ThumbUpIcon"
+      >
+        <path
+          d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"
+        ></path>
+      </svg>
+    </div>
 
-    <p class="likes-count">12834</p>
-    <h4 class="likes-title">Likes</h4>
+    <div>
+      <p class="likes-count">12834</p>
+      <h4 class="likes-title">Likes</h4>
+    </div>
 
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hajqjp-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="ArrowDropUpIcon"
-    ><path d="m7 14 5-5 5 5z"></path>
-    </svg>
+    <div class="arrow-icon arrow-up-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hajqjp-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="ArrowDropUpIcon"
+      >
+        <path d="m7 14 5-5 5 5z"></path>
+      </svg>
+    </div>
   </div>
 
-  <div class="loves-card">
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="FavoriteIcon"
-      style="color: rgb(255, 255, 255);"
-    >
-      <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-      ></path>
-    </svg>
+  <div class="user-state-card loves-card">
+    <div class="user-state-icon heart-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="FavoriteIcon"
+        style="color: rgb(255, 255, 255);"
+      >
+        <path
+          d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+        ></path>
+      </svg>
+    </div>
 
-    <p class="loves-count">91134</p>
-    <h4 class="loves-title">Love</h4>
+    <div>
+      <p class="loves-count">91134</p>
+      <h4 class="loves-title">Love</h4>
+    </div>
 
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a7yg82-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="ArrowRightIcon"
-    >
-      <path d="m10 17 5-5-5-5v10z"></path>
-    </svg>
+    <div class="arrow-icon arrow-right-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-a7yg82-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="ArrowRightIcon"
+      >
+        <path d="m10 17 5-5-5-5v10z"></path>
+      </svg>
+    </div>
   </div>
 
-  <div class="smiles-card">
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="EmojiEmotionsIcon"
-      style="color: rgb(255, 255, 255);">
-      <path
-        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM8.5 8c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zM12 18c-2.28 0-4.22-1.66-5-4h10c-.78 2.34-2.72 4-5 4zm3.5-7c-.83 0-1.5-.67-1.5-1.5S14.67 8 15.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
-      ></path>
-    </svg>
+  <div class="user-state-card smiles-card">
+    <div class="user-state-icon smile-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="EmojiEmotionsIcon"
+        style="color: rgb(255, 255, 255);">
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM8.5 8c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zM12 18c-2.28 0-4.22-1.66-5-4h10c-.78 2.34-2.72 4-5 4zm3.5-7c-.83 0-1.5-.67-1.5-1.5S14.67 8 15.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+        ></path>
+      </svg>
+    </div>
 
-    <p class="smiles-count">71238</p>
-    <h4 class="smiles-title">Smiles</h4>
+    <div>
+      <p class="smiles-count">71238</p>
+      <h4 class="smiles-title">Smiles</h4>
+    </div>
 
-    <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pm3nrw-MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      data-testid="ArrowDropDownIcon"
-    >
-      <path
-        d="m7 10 5 5 5-5z"
-      ></path>
-    </svg>
+    <div class="arrow-icon arrow-down-icon">
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pm3nrw-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        data-testid="ArrowDropDownIcon"
+      >
+        <path
+          d="m7 10 5 5 5-5z"
+        ></path>
+      </svg>
+    </div>
   </div>
 
   <div class="views-card">
     <h4 class="views-title">Views</h4>
     <p class="views-count">91234</p>
 
-    <div class="views-chard"></div>
+    <div class="views-chart">
+      <svg
+        class="recharts-surface"
+        width="296"
+        height="224"
+        viewBox="0 0 296 224"
+        version="1.1"
+      >
+        <defs>
+          <clipPath
+            id="recharts4-clip">
+            <rect x="0" y="0" height="194" width="296"></rect>
+          </clipPath>
+        </defs>
+        <g
+          class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"
+        >
+          <g class="recharts-cartesian-axis-ticks">
+            <g class="recharts-layer recharts-cartesian-axis-tick">
+              <text
+                orientation="bottom"
+                width="296"
+                height="30"
+                type="category"
+                x="11.37890625"
+                y="202"
+                stroke="none"
+                fill="#607D8B"
+                font-size="12"
+                class="recharts-text recharts-cartesian-axis-tick-value"
+                text-anchor="middle"
+              >
+                <tspan
+                  x="11.37890625"
+                  dy="0.71em"
+                >
+                  Jan
+                </tspan>
+              </text>
+            </g>
+            <g class="recharts-layer recharts-cartesian-axis-tick">
+              <text
+                orientation="bottom"
+                width="296"
+                height="30"
+                type="category"
+                x="98.66666666666667"
+                y="202"
+                stroke="none"
+                fill="#607D8B"
+                font-size="12"
+                class="recharts-text recharts-cartesian-axis-tick-value"
+                text-anchor="middle"
+              >
+                <tspan x="98.66666666666667" dy="0.71em">Feb</tspan>
+              </text>
+            </g>
+            <g class="recharts-layer recharts-cartesian-axis-tick">
+              <text
+                orientation="bottom"
+                width="296"
+                height="30"
+                type="category"
+                x="197.33333333333334"
+                y="202"
+                stroke="none"
+                fill="#607D8B"
+                font-size="12"
+                class="recharts-text recharts-cartesian-axis-tick-value"
+                text-anchor="middle"
+              >
+                <tspan x="197.33333333333334" dy="0.71em">Mar</tspan>
+              </text>
+            </g>
+            <g class="recharts-layer recharts-cartesian-axis-tick">
+              <text
+                orientation="bottom"
+                width="296"
+                height="30"
+                type="category"
+                x="283.39453125"
+                y="202"
+                stroke="none"
+                fill="#607D8B"
+                font-size="12"
+                class="recharts-text recharts-cartesian-axis-tick-value"
+                text-anchor="middle"
+              >
+                <tspan x="283.39453125" dy="0.71em">Avr</tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+        <g class="recharts-layer recharts-area">
+          <g class="recharts-layer">
+            <path
+              fill="#2962FF"
+              fill-opacity="0.3"
+              stroke-width="6"
+              points="[object Object],[object Object],[object Object],[object Object]"
+              width="296"
+              height="194"
+              type="monotone"
+              stroke="none"
+              class="recharts-curve recharts-area-area"
+              d="M0,133.375C32.88888888888889,146.7125,65.77777777777777,160.04999999999998,98.66666666666667,160.04999999999998C131.55555555555557,160.04999999999998,164.44444444444446,48.5,197.33333333333334,48.5C230.22222222222223,48.5,263.1111111111111,72.75,296,97L296,194C263.1111111111111,194,230.22222222222223,194,197.33333333333334,194C164.44444444444446,194,131.55555555555557,194,98.66666666666667,194C65.77777777777777,194,32.88888888888889,194,0,194Z"
+            >
+
+            </path>
+            <path
+              type="monotone"
+              fill="none"
+              fill-opacity="0.3"
+              stroke="#2962FF"
+              stroke-width="6"
+              points="[object Object],[object Object],[object Object],[object Object]"
+              width="296"
+              height="194"
+              class="recharts-curve recharts-area-curve"
+              d="M0,133.375C32.88888888888889,146.7125,65.77777777777777,160.04999999999998,98.66666666666667,160.04999999999998C131.55555555555557,160.04999999999998,164.44444444444446,48.5,197.33333333333334,48.5C230.22222222222223,48.5,263.1111111111111,72.75,296,97"
+            ></path>
+      </g>
+      </g>
+      </svg>
+    </div>
 
     <div class="views-footer">
-      <svg
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        data-testid="DashboardIcon"
-      >
-        <path
-          d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
-      </svg>
+      <div class="dashboard-icon">
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1uynuqf-MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          data-testid="DashboardIcon"
+        >
+          <path
+            d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
+        </svg>
+      </div>
 
       <a class="dashboard-link" href="#">View Dashboard</a>
 
