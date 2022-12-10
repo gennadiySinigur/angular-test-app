@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../../services/authentication.service';
 
@@ -11,7 +12,10 @@ import { AuthenticationService } from '../../services/authentication.service';
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private authenticationService: AuthenticationService) { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -35,6 +39,7 @@ export class LoginFormComponent implements OnInit {
       const { email, password } = this.loginForm.value;
 
       this.authenticationService.login(email, password);
+      this.router.navigateByUrl('/admin');
     }
   }
 
