@@ -7,17 +7,19 @@ import { LineChart } from '../../models/lineChart';
   providedIn: 'root'
 })
 export class ChartsService {
-  createLineChart(): LineChart {
+  createLineChart(
+    chartLabels: Array<string>,
+    chartDatasetLabel: string,
+    chartData: Array<string> | Array<{ x: string; y: number; }>
+  ): LineChart {
     return new Chart("MyChart", {
       type: 'line',
       data: {
-        labels: [
-          'Jan', 'Feb', 'Mar', 'Apr'
-        ],
+        labels: chartLabels,
         datasets: [
           {
             label: "fb",
-            data: ['2.5', '1.4', '6', '4'],
+            data: chartData,
             backgroundColor: 'rgb(41, 98, 255)',
             borderColor: 'rgb(41, 98, 255)',
             borderWidth: 6,
@@ -27,12 +29,7 @@ export class ChartsService {
             pointHoverBorderWidth: 2
           },
           {
-            data: [
-              { x: 'Jan', y: 0 },
-              { x: 'Feb', y: 0 },
-              { x: 'Mar', y: 0 },
-              { x: 'Apr', y: 0 },
-            ],
+            data: this.transformLabelsForBackgroundFill(chartLabels),
             backgroundColor: 'rgba(41,98,255,0.26)',
             borderColor: 'transparent',
             borderWidth: 0,
@@ -78,4 +75,12 @@ export class ChartsService {
       }
     });
   }
+
+  transformLabelsForBackgroundFill(labels: Array<string>): Array<{ x: string, y: number }> {
+    return labels.map((element: string): { x: string, y: number } => ({
+      x: element,
+      y: 0
+    }));
+  }
 }
+

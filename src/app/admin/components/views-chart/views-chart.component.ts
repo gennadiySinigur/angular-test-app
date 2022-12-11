@@ -10,6 +10,9 @@ import { LineChart } from '../../models/lineChart';
 })
 export class ViewsChartComponent implements OnInit {
   public chart: LineChart;
+  public chartDataLabels: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr'];
+  public chartDatasetLabel: string = 'fb';
+  public chartData: Array<string> = ['2.5', '1.4', '6', '4'];
 
   constructor(private chartsService: ChartsService) { }
 
@@ -18,6 +21,10 @@ export class ViewsChartComponent implements OnInit {
   }
 
   createChart(): void {
-    this.chart = this.chartsService.createLineChart();
+    this.chart = this.chartsService.createLineChart(
+      this.chartDataLabels,
+      this.chartDatasetLabel,
+      this.chartData
+    );
   }
 }
