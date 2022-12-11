@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
-import { RandomUserData } from '../models/randomUserData';
-import { RandomUser } from '../models/randomUser';
+import { RandomUserData } from '../../models/randomUserData';
+import { RandomUser } from '../../models/randomUser';
 
 @Injectable({
   providedIn: 'root'

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable} from 'rxjs';
 
 import { UtilsService } from '../../../shared/services/utils.service';
-import { UsersApiService } from '../../services/users-api.service';
+import { UsersApiService } from '../../services/users-api/users-api.service';
 import { RandomUser } from '../../models/randomUser';
 
 @Component({
