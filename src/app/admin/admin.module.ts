@@ -11,6 +11,7 @@ import { UserStateCardsComponent } from './components/user-state/user-state-card
 import { LikeIconComponent } from './components/like-icon/like-icon.component';
 import { HeartIconComponent } from './components/heart-icon/heart-icon.component';
 import { SmileIconComponent } from './components/smile-icon/smile-icon.component';
+import { ViewsChartComponent } from './components/views-chart/views-chart.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SmileIconComponent } from './components/smile-icon/smile-icon.component
     UserStateCardsComponent,
     LikeIconComponent,
     HeartIconComponent,
-    SmileIconComponent
+    SmileIconComponent,
+    ViewsChartComponent
   ],
   imports: [
     CommonModule,
