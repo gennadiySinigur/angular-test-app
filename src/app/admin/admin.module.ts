@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AdminComponent } from './admin.component';
@@ -27,6 +27,7 @@ import { SmileIconComponent } from './components/smile-icon/smile-icon.component
   imports: [
     CommonModule,
     HttpClientModule,
+    NgOptimizedImage,
   ],
   exports: [
     AdminComponent

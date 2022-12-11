@@ -45,7 +45,7 @@
     <div class="meetings-list">
       <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img [src]="user.picture.thumbnail" alt="avatar">
+          <img [ngSrc]="user.picture.thumbnail" width="40" height="40" alt="avatar">
         </div>
 
         <div class="meeting-info">
@@ -68,7 +68,7 @@
 
       <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img [src]="user.picture.thumbnail" alt="avatar">
+          <img [ngSrc]="user.picture.thumbnail" width="40" height="40" alt="avatar">
         </div>
 
         <div class="meeting-info">
@@ -91,7 +91,7 @@
 
       <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img [src]="user.picture.thumbnail" alt="avatar">
+          <img [ngSrc]="user.picture.thumbnail" width="40" height="40" alt="avatar">
         </div>
 
         <div class="meeting-info">
