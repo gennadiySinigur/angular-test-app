@@ -6,11 +6,13 @@ import { StoreModule } from '@ngrx/store';
 import { authReducer } from './state/auth/auth.reducer';
 import { LoginComponent } from './login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
   ],
   exports: [
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    SidebarComponent
   ]
 })
 export class CoreModule { }
