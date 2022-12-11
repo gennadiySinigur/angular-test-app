@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable} from 'rxjs';
 
 import { UtilsService } from '../../../shared/services/utils.service';
+import { UsersApiService } from '../../services/users-api.service';
+import { RandomUser } from '../../models/randomUser';
 
 @Component({
   selector: 'app-user-targets',
   templateUrl: './user-targets.component.html',
-  styleUrls: ['./user-targets.component.scss']
+  styleUrls: ['./user-targets.component.scss'],
 })
 export class UserTargetsComponent implements OnInit {
   viewsPercent: number = 0;
@@ -15,10 +18,20 @@ export class UserTargetsComponent implements OnInit {
   MAX: number = 95;
   FULL_PROGRESS_BAR_PERCENT: number = 100;
 
-  constructor(private utilsService: UtilsService) { }
+  randomUser$: Observable<RandomUser> = new Observable<RandomUser>();
+
+  constructor(
+    private utilsService: UtilsService,
+    private usersApiService: UsersApiService,
+  ) { }
 
   ngOnInit(): void {
+    this.getRandomUser();
     this.getRandomPercent(this.MIN, this.MAX);
+  }
+
+  getRandomUser(): void {
+    this.randomUser$ = this.usersApiService.getRandomUser();
   }
 
   getRandomPercent(min: number, max: number): void {

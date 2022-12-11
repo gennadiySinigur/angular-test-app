@@ -43,13 +43,13 @@
     <h3 class="meetings-title">Meetings</h3>
 
     <div class="meetings-list">
-      <div class="meeting-card">
+      <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img src="https://m6v3l9.github.io/react-material-admin/img/portrait-1.jpg" alt="avatar">
+          <img [src]="user.picture.thumbnail" alt="avatar">
         </div>
 
         <div class="meeting-info">
-          <p class="meeting-person-name">John Smith</p>
+          <p class="meeting-person-name">{{ user.name.first }} {{ user.name.last }}</p>
           <p class="meeting-time">8.00 - 11.00</p>
         </div>
 
@@ -66,13 +66,13 @@
         </div>
       </div>
 
-      <div class="meeting-card">
+      <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img src="https://m6v3l9.github.io/react-material-admin/img/portrait-1.jpg" alt="avatar">
+          <img [src]="user.picture.thumbnail" alt="avatar">
         </div>
 
         <div class="meeting-info">
-          <p class="meeting-person-name">John Smith</p>
+          <p class="meeting-person-name">{{ user.name.first }} {{ user.name.last }}</p>
           <p class="meeting-time">8.00 - 11.00</p>
         </div>
 
@@ -89,13 +89,13 @@
         </div>
       </div>
 
-      <div class="meeting-card">
+      <div *ngIf="randomUser$ | async as user" class="meeting-card">
         <div class="meeting-person-avatar">
-          <img src="https://m6v3l9.github.io/react-material-admin/img/portrait-1.jpg" alt="avatar">
+          <img [src]="user.picture.thumbnail" alt="avatar">
         </div>
 
         <div class="meeting-info">
-          <p class="meeting-person-name">John Smith</p>
+          <p class="meeting-person-name">{{ user.name.first }} {{ user.name.last }}</p>
           <p class="meeting-time">8.00 - 11.00</p>
         </div>
 
