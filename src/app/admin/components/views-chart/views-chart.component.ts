@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import Chart from 'chart.js/auto';
-import {ChartsService} from '../../services/charts/charts.service';
+
+import { ChartsService } from '../../services/charts/charts.service';
+import { LineChart } from '../../models/lineChart';
 
 @Component({
   selector: 'app-views-chart',
@@ -8,7 +9,7 @@ import {ChartsService} from '../../services/charts/charts.service';
   styleUrls: ['./views-chart.component.scss']
 })
 export class ViewsChartComponent implements OnInit {
-  public chart: Chart<"line", string[] | { x: string; y: number; }[], string> | undefined;
+  public chart: LineChart;
 
   constructor(private chartsService: ChartsService) { }
 

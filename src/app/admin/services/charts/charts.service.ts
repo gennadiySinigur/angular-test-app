@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import Chart from 'chart.js/auto';
 
+import { LineChart } from '../../models/lineChart';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ChartsService {
-
-  constructor() { }
-
-  createLineChart(): Chart<"line", string[] | { x: string; y: number; }[], string> | undefined {
+  createLineChart(): LineChart {
     return new Chart("MyChart", {
       type: 'line',
       data: {
